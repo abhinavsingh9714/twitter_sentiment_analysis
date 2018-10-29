@@ -99,7 +99,7 @@ open_file.close()
 
 
 
-voted_classifier = Voting(
+voted = Voting(
                                   classifier,
                                   LinearSVC_classifier,
                                   MNB_classifier,
@@ -110,5 +110,5 @@ voted_classifier = Voting(
 
 
 def sentiment(text):
-    feats = find_features(text)
-    return voted_classifier.classify(feats),voted_classifier.confidence(feats)
+    feat = find_features(text)
+    return voted.classify(feat),voted.confidence(feat)
