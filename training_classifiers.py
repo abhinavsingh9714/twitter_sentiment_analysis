@@ -62,6 +62,9 @@ def find_features(document):
 
 
 featuresets = [(find_features(rev), category) for (rev, category) in documents]
+featuresets_f = open("pickled_algos/featuresets.pickle", "wb")
+pickle.dump(featuresets,featuresets_f)
+featuresets_f.close()
 
 random.shuffle(featuresets)
 
