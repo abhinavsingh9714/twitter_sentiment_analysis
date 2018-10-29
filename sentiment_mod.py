@@ -11,7 +11,7 @@ from nltk.tokenize import word_tokenize
 
 
 
-class VoteClassifier(ClassifierI):
+class Voteing(ClassifierI):
     def __init__(self, *classifiers):
         self._classifiers = classifiers
 
@@ -55,10 +55,9 @@ def find_features(document):
 
 
 
-#featuresets_f = open("pickled_algos/featuresets.pickle", "rb")
-#featuresets = pickle.load(featuresets_f)
-#featuresets_f.close()
-featuresets = [(find_features(rev), category) for (rev, category) in documents]
+featuresets = open("pickled_algos/featuresets.pickle", "rb")
+featuresets = pickle.load(featuresets_f)
+featuresets_f.close()
 random.shuffle(featuresets)
 print(len(featuresets))
 
