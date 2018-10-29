@@ -99,7 +99,7 @@ open_file.close()
 
 
 
-voted_classifier = VoteClassifier(
+voted_classifier = Voting(
                                   classifier,
                                   LinearSVC_classifier,
                                   MNB_classifier,
