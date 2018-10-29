@@ -1,6 +1,5 @@
 import nltk
 import random
-#from nltk.corpus import movie_reviews
 from nltk.classify.scikitlearn import SklearnClassifier
 import pickle
 from sklearn.naive_bayes import MultinomialNB, BernoulliNB
@@ -41,9 +40,9 @@ documents_f.close()
 
 
 
-word_features5k_f = open("pickled_algos/word_features.pickle", "rb")
-word_features = pickle.load(word_features5k_f)
-word_features5k_f.close()
+word_features_f = open("pickled_algos/word_features.pickle", "rb")
+word_features = pickle.load(word_features_f)
+word_features_f.close()
 
 
 def find_features(document):
